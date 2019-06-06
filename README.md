@@ -3,4 +3,4 @@
 Little clone of AirBnb in next js
 
 
-Recherche d'appartement sur une API, mettre en Favoris un appartement, disponibilité des appartement
+Recherche d'appartement sur une API, mettre en Favoris un appartement, disponibilité des appartements
