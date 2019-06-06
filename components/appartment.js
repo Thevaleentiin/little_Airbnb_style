@@ -1,6 +1,15 @@
 import { object, array, func } from 'prop-types'
+import Link from 'next/link'
 
-const Appartment = ({appartment: {id, title, acf}, favorites, toggleFav}) => (
+const PostLink = props => (
+  <>
+    <Link as={`/p/${props.id}`} href={`/appartement?title=${props.title}`}>
+      <a>{props.title}</a>
+    </Link>
+  </>
+);
+
+const Appartment = ({appartment: {id, slug, title, acf}, favorites, toggleFav}) => (
   <div>
     <img src={acf.image} alt="lol"/>
     <h1>
@@ -14,9 +23,9 @@ const Appartment = ({appartment: {id, title, acf}, favorites, toggleFav}) => (
     <button onClick={e => toggleFav(e, id)}>
       {favorites.includes(id) ? 'Remove favorite' : 'Set favorite'}
     </button>
-
     <p>${acf.price} per night</p>
     <p>{new Array(parseInt(acf.rating)).fill('⭐️️️️️')}</p>
+    <PostLink title={title.rendered} id={slug} />
   </div>
 )
 

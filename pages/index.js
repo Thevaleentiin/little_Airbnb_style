@@ -1,10 +1,10 @@
 // pages/index.js
 import { Component } from 'react'
 import Head from 'next/head'
-import { config } from '../components/config.js'
-import Layout from '../components/myLayout.js'
-import AppartmentList from '../components/appartmentList.js'
-import Searchbar from '../components/searchBar.js'
+import { config } from '../components/Config.js'
+import Layout from '../components/MyLayout.js'
+import AppartmentList from '../components/AppartmentList.js'
+import Searchbar from '../components/SearchBar.js'
 
 const fetch = require("node-fetch");
 

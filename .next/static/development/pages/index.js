@@ -15,10 +15,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 
 var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\Appartment.js";
 
 
+
+
+var PostLink = function PostLink(props) {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/post?title=".concat(props.title),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, props.title)));
+};
 
 var Appartment = function Appartment(_ref) {
   var _ref$appartment = _ref.appartment,
@@ -30,7 +50,7 @@ var Appartment = function Appartment(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -38,13 +58,13 @@ var Appartment = function Appartment(_ref) {
     alt: "lol",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 14
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -52,7 +72,7 @@ var Appartment = function Appartment(_ref) {
     width: "20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("circle", {
@@ -62,7 +82,7 @@ var Appartment = function Appartment(_ref) {
     fill: acf.available ? 'green' : 'red',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 17
     },
     __self: this
   })), title.rendered, favorites.includes(id) && '❤️'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
@@ -71,22 +91,29 @@ var Appartment = function Appartment(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 23
     },
     __self: this
   }, favorites.includes(id) ? 'Remove favorite' : 'Set favorite'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 26
     },
     __self: this
   }, "$", acf.price, " per night"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 27
     },
     __self: this
-  }, new Array(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(acf.rating)).fill('⭐️️️️️')));
+  }, new Array(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(acf.rating)).fill('⭐️️️️️')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostLink, {
+    title: title.rendered,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Appartment);
@@ -98,9 +125,9 @@ Appartment.propTypes = {
 
 /***/ }),
 
-/***/ "./components/appartmentList.js":
+/***/ "./components/AppartmentList.js":
 /*!**************************************!*\
-  !*** ./components/appartmentList.js ***!
+  !*** ./components/AppartmentList.js ***!
   \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -112,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Appartment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Appartment */ "./components/Appartment.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\appartmentList.js";
+var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\AppartmentList.js";
 
 
 
@@ -151,9 +178,9 @@ AppartmentList.propTypes = {
 
 /***/ }),
 
-/***/ "./components/config.js":
+/***/ "./components/Config.js":
 /*!******************************!*\
-  !*** ./components/config.js ***!
+  !*** ./components/Config.js ***!
   \******************************/
 /*! exports provided: config */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -167,9 +194,9 @@ var config = {
 
 /***/ }),
 
-/***/ "./components/header.js":
+/***/ "./components/Header.js":
 /*!******************************!*\
-  !*** ./components/header.js ***!
+  !*** ./components/Header.js ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -180,7 +207,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\header.js";
+var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\Header.js";
 
 
 var linkStyle = {
@@ -217,6 +244,7 @@ var Header = function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
+    title: "About Page",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -229,9 +257,9 @@ var Header = function Header() {
 
 /***/ }),
 
-/***/ "./components/myLayout.js":
+/***/ "./components/MyLayout.js":
 /*!********************************!*\
-  !*** ./components/myLayout.js ***!
+  !*** ./components/MyLayout.js ***!
   \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -240,8 +268,8 @@ var Header = function Header() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ "./components/header.js");
-var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\myLayout.js";
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
+var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\MyLayout.js";
 
 
 var layoutStyle = {
@@ -258,7 +286,7 @@ var Layout = function Layout(props) {
       lineNumber: 10
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
@@ -271,9 +299,9 @@ var Layout = function Layout(props) {
 
 /***/ }),
 
-/***/ "./components/searchBar.js":
+/***/ "./components/SearchBar.js":
 /*!*********************************!*\
-  !*** ./components/searchBar.js ***!
+  !*** ./components/SearchBar.js ***!
   \*********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -284,7 +312,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\searchBar.js";
+var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\SearchBar.js";
 
 
 
@@ -10975,10 +11003,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/head */ "./node_modules/next-server/dist/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_config_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/config.js */ "./components/config.js");
-/* harmony import */ var _components_myLayout_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/myLayout.js */ "./components/myLayout.js");
-/* harmony import */ var _components_appartmentList_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/appartmentList.js */ "./components/appartmentList.js");
-/* harmony import */ var _components_searchBar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/searchBar.js */ "./components/searchBar.js");
+/* harmony import */ var _components_Config_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Config.js */ "./components/Config.js");
+/* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
+/* harmony import */ var _components_AppartmentList_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/AppartmentList.js */ "./components/AppartmentList.js");
+/* harmony import */ var _components_SearchBar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/SearchBar.js */ "./components/SearchBar.js");
 
 
 
@@ -11074,7 +11102,7 @@ function (_Component) {
                 this.setState({
                   isLoading: true
                 });
-                apiUrl = _components_config_js__WEBPACK_IMPORTED_MODULE_11__["config"].apiUrl;
+                apiUrl = _components_Config_js__WEBPACK_IMPORTED_MODULE_11__["config"].apiUrl;
                 _context.next = 4;
                 return fetch(apiUrl);
 
@@ -11156,7 +11184,7 @@ function (_Component) {
           lineNumber: 72
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_myLayout_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 74
@@ -11181,7 +11209,7 @@ function (_Component) {
           lineNumber: 78
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_searchBar_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_SearchBar_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
         searchValue: searchValue,
         handleInputText: this.handleInputText,
         found: availableAppartments.length,
@@ -11197,7 +11225,7 @@ function (_Component) {
           lineNumber: 86
         },
         __self: this
-      }, "Loading ...") : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_appartmentList_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }, "Loading ...") : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_AppartmentList_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
         appartments: availableAppartments,
         favorites: favorites,
         toggleFav: this.toggleFavorite,
