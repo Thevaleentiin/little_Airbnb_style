@@ -1,14 +1,14 @@
 import { string, func, number } from 'prop-types'
 
 const SearchBar = ({searchValue, handleInputText, found, total}) => (
-  <div>
-    <input type="text" value={searchValue} onChange={handleInputText}/>
+  <>
+    <input className="IptSearch" type="text" placeholder="tapez le nom d'un appartement" value={searchValue} onChange={handleInputText}/>
     {found ?
-     <p>Found {found} out of {total}</p>
+     <p className="Found">Found {found} out of {total}</p>
      :
-     <p>No appartment found</p>
+     <p className="Found">No appartment found</p>
     }
-  </div>
+  </>
 )
 
 export default SearchBar

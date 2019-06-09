@@ -17,40 +17,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../style.css */ "./style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
 
 var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\Appartment.js";
 
 
 
 
-var PostLink = function PostLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/post?title=".concat(props.title),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, props.title)));
-};
 
 var Appartment = function Appartment(_ref) {
   var _ref$appartment = _ref.appartment,
       id = _ref$appartment.id,
+      slug = _ref$appartment.slug,
       title = _ref$appartment.title,
       acf = _ref$appartment.acf,
       favorites = _ref.favorites,
       toggleFav = _ref.toggleFav;
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "appart-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -58,13 +46,20 @@ var Appartment = function Appartment(_ref) {
     alt: "lol",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 8
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container-text-appartement",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", {
@@ -72,7 +67,7 @@ var Appartment = function Appartment(_ref) {
     width: "20",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("circle", {
@@ -82,38 +77,47 @@ var Appartment = function Appartment(_ref) {
     fill: acf.available ? 'green' : 'red',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 12
     },
     __self: this
   })), title.rendered, favorites.includes(id) && '❤️'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    className: "Btn-primary",
     onClick: function onClick(e) {
       return toggleFav(e, id);
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 18
     },
     __self: this
-  }, favorites.includes(id) ? 'Remove favorite' : 'Set favorite'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, favorites.includes(id) ? 'Remove favorite' : 'Set favorite'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    as: "/Appartement/".concat(slug),
+    href: "/Appartement?id=".concat(id),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 21
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    className: "Btn-primary",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "Voir l'annonce")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
     },
     __self: this
   }, "$", acf.price, " per night"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 25
     },
     __self: this
-  }, new Array(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(acf.rating)).fill('⭐️️️️️')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PostLink, {
-    title: title.rendered,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }));
+  }, new Array(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(acf.rating)).fill('⭐️️️️️'))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Appartment);
@@ -189,7 +193,7 @@ AppartmentList.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
 var config = {
-  apiUrl: "http://apirl.xyz/wp-json/wp/v2/appartments?_fields=id,title,acf"
+  apiUrl: "http://apirl.xyz/wp-json/wp/v2/appartments?_fields=id,title,slug,acf"
 };
 
 /***/ }),
@@ -207,7 +211,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../style.css */ "./style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\Header.js";
+
 
 
 var linkStyle = {
@@ -216,27 +223,33 @@ var linkStyle = {
 
 var Header = function Header() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
+    className: "header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    style: linkStyle,
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "title-header",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/about",
+  }, "Appart", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Finder")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
@@ -244,13 +257,27 @@ var Header = function Header() {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle,
-    title: "About Page",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }, "About")));
+  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/about",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    style: linkStyle,
+    title: "About Page",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "About"))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -271,25 +298,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./components/Header.js");
 var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\components\\MyLayout.js";
 
-
-var layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
+ // const layoutStyle = {
+//   margin: 20,
+//   padding: 20,
+// }
 
 var Layout = function Layout(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: layoutStyle,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 10
     },
     __self: this
   }), props.children);
@@ -321,14 +345,10 @@ var SearchBar = function SearchBar(_ref) {
       handleInputText = _ref.handleInputText,
       found = _ref.found,
       total = _ref.total;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "IptSearch",
     type: "text",
+    placeholder: "tapez le nom d'un appartement",
     value: searchValue,
     onChange: handleInputText,
     __source: {
@@ -337,12 +357,14 @@ var SearchBar = function SearchBar(_ref) {
     },
     __self: this
   }), found ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "Found",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
   }, "Found ", found, " out of ", total) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "Found",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -11007,6 +11029,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_MyLayout_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/MyLayout.js */ "./components/MyLayout.js");
 /* harmony import */ var _components_AppartmentList_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/AppartmentList.js */ "./components/AppartmentList.js");
 /* harmony import */ var _components_SearchBar_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/SearchBar.js */ "./components/SearchBar.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../style.css */ "./style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_15__);
 
 
 
@@ -11019,6 +11043,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "D:\\Google Drive\\DEV\\3eme ANNEE\\React\\Airbnb_clone\\pages\\index.js";
 
 // pages/index.js
+
 
 
 
@@ -11154,26 +11179,26 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 69
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_10___default.a, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 71
         },
         __self: this
-      }, "Home"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
+      }, "Liste d'appartements"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
         charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 72
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
@@ -11181,32 +11206,47 @@ function (_Component) {
         content: "initial-scale=1.0, width=device-width",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 73
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_MyLayout_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
-        },
-        __self: this
-      }, "Apartment List", react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 75
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
-        onClick: this.toggleShow,
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "container-all",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 76
         },
         __self: this
-      }, showAll ? 'Show only available' : 'ShowAll'), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "search-container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 78
+        },
+        __self: this
+      }, "Nos appartements disponible:"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("button", {
+        className: "btn-Show",
+        onClick: this.toggleShow,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }, showAll ? 'Show only available' : 'ShowAll'), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_SearchBar_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -11216,13 +11256,20 @@ function (_Component) {
         total: appartments.length,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 82
         },
         __self: this
-      }), isLoading ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        className: "result-search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 89
+        },
+        __self: this
+      }, isLoading ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
         },
         __self: this
       }, "Loading ...") : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_AppartmentList_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -11231,10 +11278,10 @@ function (_Component) {
         toggleFav: this.toggleFavorite,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 93
         },
         __self: this
-      })));
+      })))));
     }
   }]);
 
@@ -11268,5 +11315,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

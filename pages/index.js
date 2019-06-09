@@ -5,6 +5,7 @@ import { config } from '../components/Config.js'
 import Layout from '../components/MyLayout.js'
 import AppartmentList from '../components/AppartmentList.js'
 import Searchbar from '../components/SearchBar.js'
+import "../style.css"
 
 const fetch = require("node-fetch");
 
@@ -67,30 +68,36 @@ class Index extends Component {
     return (
       <div>
       <Head>
-      <title>Home</title>
+      <title>Liste d'appartements</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <Layout>
-        Apartment List<br/>
-        <button onClick={this.toggleShow}>
-          {showAll ? 'Show only available' : 'ShowAll'}
-        </button><br/>
-        <Searchbar
-          searchValue={searchValue}
-          handleInputText={this.handleInputText}
-          found={availableAppartments.length}
-          total={appartments.length}
-          />
-        {isLoading ?
-          <p>Loading ...</p>
-          :
-          <AppartmentList
-            appartments={availableAppartments}
-            favorites={favorites}
-            toggleFav={this.toggleFavorite}
-          />
-        }
+        <div className="container-all">
+          <div className="search-container">
+            <h1>Nos appartements disponible:</h1>
+            <button className="btn-Show" onClick={this.toggleShow}>
+              {showAll ? 'Show only available' : 'ShowAll'}
+            </button><br/>
+            <Searchbar
+              searchValue={searchValue}
+              handleInputText={this.handleInputText}
+              found={availableAppartments.length}
+              total={appartments.length}
+              />
+          </div>
+          <div className="result-search">
+            {isLoading ?
+              <p>Loading ...</p>
+              :
+              <AppartmentList
+                appartments={availableAppartments}
+                favorites={favorites}
+                toggleFav={this.toggleFavorite}
+              />
+            }
+          </div>
+        </div>
       </Layout>
       </div>
     )

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4{
+    font-family: 'Poppins', sans-serif;
+}
+img{
+    width: 200px;
+    height: auto;
+}
+h1{
+    font-size: 1.5rem;
+}
+
+.title-header{
+    font-size: 2rem;
+    color: rgb(27, 27, 27);
+    font-weight: bold;
+}
+.title-header span{
+    color: #e67777;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 0;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.container-all{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container-all .search-container, .container-all .result-search{
+    width: 50%;
+}
+
+.container-all .search-container{
+    align-self: flex-start;
+    padding: 3% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-all .result-search{
+    padding: 0% 2% 0 0;
+}
+/* .container-all .search-container .containerIpt{
+    width: 100%;
+} */
+.btn-Show{
+    padding: 10px;
+    border: 0;
+    border: 1px solid rgb(27, 27, 27);
+    background: transparent;
+    transition: all 0.3s ease;
+    margin: 20px 0 0 0;
+}
+.btn-Show:hover{
+    color: white;
+    background: rgb(27, 27, 27);
+}
+.IptSearch{
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid rgb(94, 94, 94);
+    width: 60%;
+}
+.IptSearch:focus{
+    outline: 0;
+}
+.Found{
+    margin: 10px 0 0 0;
+    font-size: 0.8rem;
+}
+
+/* Appartement style */
+.appart-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    margin: 2% 0;
+}
+.appart-container img{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-height: 160px;
+}
+.container-text-appartement{
+    margin: 0 0 0 2%;
+}
+.Btn-primary{
+    padding: 5px 10px;
+    border: 0;
+    border: 1px solid rgb(27, 27, 27);
+    background: transparent;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+.Btn-primary:hover{
+    color: white;
+    background: rgb(27, 27, 27);
+}
+
+/*  Page appartement */
+.container-page-appartement article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-page-appartement article div img{
+    height: calc( 100vh - 105px );
+    width: auto;
+}
+.container-page-appartement article .information-appartement{
+    width: 80%;
+    margin: 5% 0;
+}
+.container-page-appartement article .information-appartement .title-price{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.container-page-appartement article .information-appartement .title-price span{
+    font-size: 1rem;
+}
+.container-page-appartement article .information-appartement .detail-appart .p1{
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
